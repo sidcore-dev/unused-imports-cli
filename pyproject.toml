@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unused-imports-cli"
+version = "1.0.0"
+description = "Find unused imports in Python files using the ast module, with no dependencies."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "All Rights Reserved" }
+authors = [{ name = "sidcore-dev" }]
+keywords = ["python", "lint", "imports", "cli", "devtools"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Environment :: Console",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.scripts]
+unused-imports-cli = "unused_imports_cli.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
